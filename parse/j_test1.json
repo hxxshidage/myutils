@@ -1,0 +1,13 @@
+{
+	"$schema": "https://wails.io/schemas/config.v2.json",
+    "author": {
+		"email": "wsdg@gmail.com",
+		"name": "wsdg"
+	},
+	"frontend:build": "npm run build",
+	"frontend:dev:serverUrl": "auto",
+	"frontend:dev:watcher": "npm run dev",
+	"frontend:install": "npm install",
+	"name": "myproject",
+	"outputfilename": "myproject"
+}

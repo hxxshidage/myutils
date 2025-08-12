@@ -1,0 +1,6 @@
+management:
+  endpoint:
+    info:
+      enabled: false
+    health:
+      enabled: false
