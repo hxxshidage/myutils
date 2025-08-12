@@ -2,8 +2,8 @@ package uguc
 
 import (
 	"fmt"
+	urtime "github.com/hxxshidage/myutils/runtime"
 	"github.com/labstack/gommon/log"
-	urtime "myutils/runtime"
 	"runtime/debug"
 )
 

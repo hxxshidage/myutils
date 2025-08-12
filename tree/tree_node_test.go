@@ -2,9 +2,9 @@ package utree
 
 import (
 	"fmt"
-	uio "myutils/io"
-	uparse "myutils/parse"
-	utype "myutils/type"
+	uio "github.com/hxxshidage/myutils/io"
+	uparse "github.com/hxxshidage/myutils/parse"
+	utype "github.com/hxxshidage/myutils/type"
 	"strings"
 	"testing"
 )

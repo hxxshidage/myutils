@@ -2,12 +2,15 @@ package uconv
 
 import (
 	"fmt"
+	utype "github.com/hxxshidage/myutils/type"
 	"testing"
 )
 
 func TestSliceConvert(t *testing.T) {
 	src := []string{"1", "2", "3"}
-	r := SliceConvert[string, int](src, S2i)
+	r := SliceConvert[string, int](src, func(idx int, item string) int {
+		return utype.S2i(item)
+	})
 	fmt.Printf("%v", r)
 
 	rr := SliceI2s(r)
@@ -16,8 +19,10 @@ func TestSliceConvert(t *testing.T) {
 
 func TestSliceConvertPost(t *testing.T) {
 	src := []int{1, 2, 3}
-	r := SliceConvertPost[int, string](src, I2s, func(i int, s string) {
-		fmt.Printf("i:%d => s:%s\n", i, s)
+	r := SliceConvertPost[int, string](src, func(idx int, item int) string {
+		return utype.I2s(item)
+	}, func(in int, out string) {
+		fmt.Printf("i:%d => s:%s\n", in, out)
 	})
 	fmt.Printf("%v", r)
 }

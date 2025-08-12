@@ -2,7 +2,7 @@ package uargs
 
 import (
 	"flag"
-	utype "myutils/type"
+	utype "github.com/hxxshidage/myutils/type"
 )
 
 type CmdArgTrans struct {

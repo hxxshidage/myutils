@@ -1,10 +1,10 @@
 package ucmd
 
 import (
+	uos "github.com/hxxshidage/myutils/os"
 	"golang.org/x/text/encoding/simplifiedchinese"
 	"golang.org/x/text/transform"
 	"io"
-	uos "myutils/os"
 	"os/exec"
 	"sync/atomic"
 	"syscall"

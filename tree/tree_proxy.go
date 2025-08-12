@@ -1,7 +1,7 @@
 package utree
 
 import (
-	uconer "myutils/container"
+	uconer "github.com/hxxshidage/myutils/container"
 	"sync"
 )
 

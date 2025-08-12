@@ -3,8 +3,8 @@ package uio
 import (
 	"bufio"
 	"fmt"
+	uos "github.com/hxxshidage/myutils/os"
 	"io"
-	uos "myutils/os"
 	"os"
 	"path/filepath"
 	"strings"

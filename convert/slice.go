@@ -1,10 +1,10 @@
 package uconv
 
 import (
-	utype "myutils/type"
+	utype "github.com/hxxshidage/myutils/type"
 )
 
-type Converter[T any, R any] func(int, T) R
+type Converter[T any, R any] func(idx int, item T) R
 
 func SliceConvert[T any, R any](src []T, converter Converter[T, R]) []R {
 	target := make([]R, len(src))
@@ -15,7 +15,7 @@ func SliceConvert[T any, R any](src []T, converter Converter[T, R]) []R {
 	return target
 }
 
-type PostFunc[T any, R any] func(T, R)
+type PostFunc[T any, R any] func(in T, out R)
 
 func SliceConvertPost[T any, R any](src []T, converter Converter[T, R], pf PostFunc[T, R]) []R {
 	target := make([]R, len(src))
